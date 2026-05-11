@@ -114,7 +114,7 @@ if (isset($_POST['update'])) {
 
         <nav class="header-nav ms-auto">
             <ul class="d-flex align-items-center">
-
+                <li class="nav-item dropdown pe-3">
                     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
                         <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
                     </a><!-- End Profile Iamge Icon -->
@@ -223,7 +223,7 @@ if (isset($_POST['update'])) {
             <nav>
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item"><a href="index.php">Dashboard</a></li>
-                    <li class="breadcrumb-item">Kategori Produk</li>
+                    <li class="breadcrumb-item">Data Produk</li>
                     <li class="breadcrumb-item active">Edit</li>
                 </ol>
             </nav>

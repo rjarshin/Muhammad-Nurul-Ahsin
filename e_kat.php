@@ -1,5 +1,5 @@
 <?php 
-include "koneksi.php" 
+include "koneksi.php"; 
 $id = $_GET['id']; 
 $sql = mysqli_query($conn, "SELECT * FROM categories WHERE id = '$id'"); 
 $hasil = mysqli_fetch_array($sql);

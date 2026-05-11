@@ -196,11 +196,12 @@
                 <?php
                 include "koneksi.php";
                 $no = 1;
+
+                //ambil data produk + nama kategpri
                 $sql = mysqli_query($conn, "
                     SELECT p.*, c.category_name
                     FROM produk p
-                    LEFT JOIN categories c
-                    ON p.category_id = c.id
+                    LEFT JOIN categories c ON p.category_id = c.id
                 ");
 
                 while ($data = mysqli_fetch_array($sql)) {
@@ -213,7 +214,7 @@
                   <td><?php echo $data['stock']; ?></td>
                   <td>Rp <?php echo number_format($data['price'],0,',','.'); ?></td>
                   <td>
-                    <img src="produk_img/<?php echo $data['gambar']; ?>" width="50" class="rounded">
+                    <img src="produk_img/<?php echo $data['gambar']; ?>" width="60" class="rounded">
                   </td>
                   <td>
                     <a href="edit_produk.php?id=<?php echo $data['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
