@@ -132,19 +132,19 @@ if (isset($_POST['simpan'])) {
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
+    <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link " href="index.php">
+        <a class="nav-link collapsed" href="index.php">
           <i class="bi bi-grid"></i>
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="kategori_produk.php">
+        <a class="nav-link " href="kategori_produk.php">
           <i class="bi bi-person"></i>
           <span>Kategori Produk</span>
         </a>
@@ -188,12 +188,11 @@ if (isset($_POST['simpan'])) {
       </nav>
     </div><!-- End Page Title -->
     <section class="section">
-      <div class="row">
-        <div class="col-lg-6">
-        </div>
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-body">
+            <div class="row">
+                <div class="col-lg-6">
+
+                    <div class="card">
+                        <div class="card-body">
               <h5 class="card-title">Tambah Kategori Produk</h5>
               <!-- Vertical Form -->
               <form class="row g-3" method="POST">
