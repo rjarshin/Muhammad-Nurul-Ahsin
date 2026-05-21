@@ -150,7 +150,7 @@ if (isset($_POST['simpan'])) {
       <li class="nav-item">
         <a class="nav-link collapsed" href="users.php">
           <i class="bi bi-card-list"></i>
-          <span>Management Users</span>
+          <span>Manajemen User</span>
         </a>
       </li><!-- End Register Page Nav -->
 

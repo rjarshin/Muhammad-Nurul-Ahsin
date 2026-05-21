@@ -220,7 +220,7 @@ function waktu_lalu($datetime)
       <li class="nav-item">
         <a class="nav-link collapsed" href="users.php">
           <i class="bi bi-card-list"></i>
-          <span>Management Users</span>
+          <span>Manajemen User</span>
         </a>
       </li><!-- End Register Page Nav -->
 
@@ -240,23 +240,7 @@ function waktu_lalu($datetime)
       </nav>
     </div><!-- End Page Title -->
 
-    
-      <div class="row">
-
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
-
-            <!-- Sales Card -->
-            <div class="col-xxl-4 col-md-6">
-              <div class="card info-card sales-card">
-
-                <div class="filter">
-                  <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <li class="dropdown-header text-start">
-                      <h6>Filter</h6>
-                 <section class="section dashboard">
+    <section class="section dashboard">
       <div class="row">
 
         <!-- Left side columns -->

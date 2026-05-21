@@ -14,9 +14,9 @@ include "koneksi.php";
 $id = $_GET['id']; 
 $sql = mysqli_query($conn, "SELECT * FROM categories WHERE id = '$id'"); 
 $hasil = mysqli_fetch_array($sql);
-if (isset($_PUST['update'])) {
+if (isset($_POST['update'])) {
     $nm_kat = $_POST['nm_kat'];
-    $query = mysql_query($conn, "UPDATE categories SET category_name = '$nm_kat' WHERE id='$id'"); 
+    $query = mysqli_query($conn, "UPDATE categories SET category_name = '$nm_kat' WHERE id='$id'"); 
     if ($query) {
         echo "<script>alert('Data berhasil diubah!')</script>";
         header("refresh:0, kategori_produk.php");
@@ -168,19 +168,19 @@ if (isset($_PUST['update'])) {
                             <h5 class="card-title">Edit Kategori Produk</h5>
 
                             <!-- Vertical Form -->
-                            <form class="row g-3">
+                            <form class="row g-3" method="POST">
                                 <div class="col-12">
                                     <label for="kd_kat" class="form-label">Kode Kategori</label>
-                                    <input type="text" class="form-control" id="kd_kat" name="kd_kat" value="<?php echo $hasil['kd_kat']; ?>" readonly>
+                                    <input type="text" class="form-control" id="kd_kat" name="nm_kat" value="<?php echo $hasil['kd_kat']; ?>" readonly>
                                 </div>
                                 <div class="col-12">
                                     <label for="nm_kat" class="form-label">Nama Kategori</label>
-                                    <input type="text" class="form-control" id="nm_kat" name="kd_kat" value="<?php echo $hasil['category_name']; ?>" required>
+                                    <input type="text" class="form-control" id="nm_kat" name="nm_kat" value="<?php echo $hasil['category_name']; ?>" required>
                                 </div>
                                 <div class="text-center">
                                     <button type="button" class="btn btn-warning"><a href="kategori_produk.php" style="color: black; text-decoration:none;">Kembali</a></button>
                                     <button type="reset" class="btn btn-secondary">Reset</button>
-                                    <button type="submit" class="btn btn-succes" name="update">Update</button>
+                                    <button type="submit" class="btn btn-success" name="update">Update</button>
                                 </div>
                             </form><!-- Vertical Form -->
 

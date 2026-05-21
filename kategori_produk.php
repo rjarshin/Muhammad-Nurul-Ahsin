@@ -10,22 +10,7 @@ if (!isset($_SESSION["login"])) {
 }
 ?>
 
-  <?php
-  include "koneksi.php";
-  $no = 1;
-  $sql = mysqli_query($conn, "SELECT * FROM categories");
-  while ($data = mysqli_fetch_array($sql)) {
-  ?>
-    <tr>
-      <td><?php echo $no++; ?></td>
-      <td><?php echo $data['kd_kat']; ?></td>
-      <td><?php echo $data['category_name']; ?></td>
-      <td>
-        <a href="e_kat.php?id=<?php echo $data['id']; ?>" class="btn btn-warning">Edit</a>
-        <a href="h_kat.php?id=<?php echo $data['id']; ?>" class="btn btn-danger" onclick="return confirm('Apakah Anda Yakin Ingin Menghapus Data?')">Hapus</a>
-      </td>
-    </tr>
-  <?php } ?>
+ 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -142,7 +127,7 @@ if (!isset($_SESSION["login"])) {
       <li class="nav-item">
         <a class="nav-link collapsed" href="users.php">
           <i class="bi bi-card-list"></i>
-          <span>Management Users</span>
+          <span>Manajemen User</span>
         </a>
       </li><!-- End Register Page Nav -->
 
@@ -170,8 +155,7 @@ if (!isset($_SESSION["login"])) {
             </div> 
           </div>
         </div> 
-      </div>    
-            
+      </div>
 
     <section class="section">
       <div class="row">
