@@ -115,7 +115,7 @@ font-weight: bold;
 
 <body>
 
-<h1>Indy</h1>
+<h1>Andy</h1>
 <hr>
 <h3>LAPORAN STOK BARANG</h3>
 
@@ -158,7 +158,7 @@ foreach ($data as $row) {
     if (empty($row['gambar']) || !file_exists($gambar)) {
         $gambarHtml = '-';
     } else {
-        $gambarHtml = '<img src="http://localhost/indy/produk_img/' . $row['gambar'] . '" width="70">';
+        $gambarHtml = '<img src="http://localhost/andy/produk_img/' . $row['gambar'] . '" width="70">';
     }
 
     $html .= '

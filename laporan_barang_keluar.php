@@ -102,7 +102,7 @@ $html = '
 
 <body>
 
-<h1>Indy</h1>
+<h1>Andy</h1>
 <hr>
 <h3>LAPORAN BARANG KELUAR</h3>
 

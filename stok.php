@@ -15,8 +15,8 @@ include "koneksi.php";
 
 if (isset($_POST['submit'])) {
 
-    $product_id = $_POST['product_id'];
-    $change_type = $_POST['change_type'];
+    $produk_id = $_POST['product_id'];
+    $CHANGE_type = $_POST['CHANGE_type'];
     $qty = intval($_POST['qty']);
     $note = $_POST['note'];
     $user_id = $_SESSION['user_id'];
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     $stock_before = $data['stock'];
 
     // hitung stok baru
-    if ($change_type == "ADD") {
+    if ($CHANGE_type == "ADD") {
         $stock_after = $stock_before + $qty;
     } else {
         $stock_after = $stock_before - $qty;
@@ -44,9 +44,9 @@ if (isset($_POST['submit'])) {
 
     // insert log
     mysqli_query($conn, "INSERT INTO stock_logs
-        (produk_id, change_type, qty, stock_before, stock_after, note, created_by)
+        (produk_id, CHANGE_type, qty, stock_before, stock_after, note, created_by)
         VALUES
-        ('$produk_id', '$change_type', '$qty', '$stock_before', '$stock_after', '$note', '$user_id')
+        ('$produk_id', '$CHANGE_type', '$qty', '$stock_before', '$stock_after', '$note', '$user_id')
     ");
 
     header("Location: stok.php?success=1");
@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Manajemen Stok - indy</title>
+  <title>Manajemen Stok - andy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -101,7 +101,7 @@ if (isset($_POST['submit'])) {
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">Indy</span>
+                <span class="d-none d-lg-block">Andy</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -222,7 +222,7 @@ if (isset($_POST['submit'])) {
 
                         <div class="mb-3">
                             <label class="form-label">Jenis Aksi</label>
-                            <select name="change_type" class="form-select">
+                            <select name="CHANGE_type" class="form-select">
                                 <option value="ADD">Tambah Stok</option>
                                 <option value="REDUCE">Kurangi Stok</option>
                             </select>
@@ -274,7 +274,7 @@ if (isset($_POST['submit'])) {
                             ");
 
                             while ($row = mysqli_fetch_assoc($query)) {
-                                $badge = $row['change_type'] == 'ADD'
+                                $badge = $row['CHANGE_type'] == 'ADD'
                                     ? "<span class='badge bg-success'>+ (ADD)</span>"
                                     : "<span class='badge bg-danger'>- (REDUCE)</span>";
 
@@ -302,7 +302,7 @@ if (isset($_POST['submit'])) {
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Indy</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Andy</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->

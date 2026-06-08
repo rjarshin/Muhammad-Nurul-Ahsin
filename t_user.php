@@ -52,7 +52,7 @@ if (isset($_POST['simpan'])){
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>User - indy</title>
+  <title>User - andy</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -87,7 +87,7 @@ if (isset($_POST['simpan'])){
         <div class="d-flex align-items-center justify-content-between">
             <a href="index.php" class="logo d-flex align-items-center">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">Indy</span>
+                <span class="d-none d-lg-block">Andy</span>
             </a>
             <i class="bi bi-list toggle-sidebar-btn"></i>
         </div><!-- End Logo -->
@@ -256,7 +256,7 @@ if (isset($_POST['simpan'])){
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Indy</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Andy</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
